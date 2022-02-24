@@ -29,8 +29,15 @@ function Board(){
                         <input className="bg-gray-50 outline-none ml-1 block " type="text" name="" id="" placeholder="search..."/>
                     </div>
                     <div className="lg:ml-40 ml-10 space-x-8">
-                        <button className="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">New Report</button>
-                        <button className="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Create</button>
+                        <button 
+                            className="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer"
+                            onClick={() => {
+                                window.open("https://github.com/jaeykweon/coding-youtubers-front", "_blank", "noopener");
+                              }}
+                        >
+                            유튜버 추가 요청
+                        </button>
+                        {/* <button className="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Create</button> */}
                     </div>
                 </div>
             </div>
@@ -42,9 +49,6 @@ function Board(){
                             <thead>
                                 <tr>
                                     <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider ">
-                                        Img
-                                    </th>
-                                    <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                         Channel
                                     </th>
                                     <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
@@ -66,28 +70,30 @@ function Board(){
                                         mainData.map((each,i)=> {
                                             return (
                                                 <tr className="">
-                                                    <td className="w-10 px-2 py-2 border-gray-200 bg-white text-sm">
-                                                        <div className="w-10 h-10">
-                                                            <img 
-                                                                className="w-full h-full rounded-full"
-                                                                src={each.profileImage}
-                                                                alt="" 
-                                                            />
+                                                    <td className="w-10 px-2 py-2 border-gray-200 bg-white">
+                                                        <div className="grid grid-cols-1 gap-4 place-items-center">
+                                                            <div className="w-10 h-10">
+                                                                <img 
+                                                                    className="w-full h-full rounded-full"
+                                                                    src={each.profileImage}
+                                                                    alt="" 
+                                                                />
+                                                            </div>
+                                                            <div className="font-sans text-gray-900 font-bold ">
+                                                                <h3>
+                                                                    {each.name}
+                                                                </h3>
+                                                            </div>
                                                         </div>
                                                     </td>
-                                                    <td className="text-center max-w-1/5 px-2 py-2 border-b border-gray-200 bg-white text-sm">
-                                                        <p className="text-gray-900 whitespace-no-wrap">
-                                                            {each.name}
-                                                        </p>
-                                                    </td>
-                                                
+                                                    
                                                     <td className="w-1/5 px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                                         <div className="flex-wrap items-center">
                                                             {each.tags}
                                                         </div>
                                                     </td>
+
                                                     <td className="w-96 px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                        
                                                         {
                                                             each.videos.map((video)=> 
                                                                 {
@@ -99,16 +105,17 @@ function Board(){
                                                                 }
                                                             )
                                                         }
-                                                        
                                                     </td>
+
                                                     <td className="w-12 px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                                         <p className="text-gray-900 whitespace-no-wrap">
                                                             2022-02-20T04:30
                                                         </p>
                                                     </td>
+
                                                     <td className="w-12 px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                                         <p className="text-gray-900 whitespace-no-wrap">
-                                                            148000
+                                                            {each.subscriberCount}
                                                         </p>
                                                         {/* <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                                                             <span aria-hidden
