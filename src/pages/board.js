@@ -70,7 +70,7 @@ function Board(){
                                         mainData.map((each,i)=> {
                                             return (
                                                 <tr className="">
-                                                    <td className="w-10 px-2 py-2 border-gray-200 bg-white">
+                                                    <td className="w-10 px-2 py-2 border-b-2 border-gray-200 bg-white">
                                                         <div className="grid grid-cols-1 gap-4 place-items-center">
                                                             <div className="w-10 h-10">
                                                                 <img 
@@ -79,7 +79,7 @@ function Board(){
                                                                     alt="" 
                                                                 />
                                                             </div>
-                                                            <div className="font-sans text-gray-900 font-bold ">
+                                                            <div className="text-gray-900 font-bold ">
                                                                 <h3>
                                                                     {each.name}
                                                                 </h3>
@@ -87,13 +87,13 @@ function Board(){
                                                         </div>
                                                     </td>
                                                     
-                                                    <td className="w-1/5 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                    <td className="w-1/5 px-5 py-5 border-b-2 border-gray-200 bg-white text-sm">
                                                         <div className="flex-wrap items-center">
                                                             {each.tags}
                                                         </div>
                                                     </td>
 
-                                                    <td className="w-96 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                    <td className="w-96 px-5 py-5 border-b-2 border-gray-200 bg-white text-sm">
                                                         {
                                                             each.videos.map((video)=> 
                                                                 {
@@ -107,13 +107,13 @@ function Board(){
                                                         }
                                                     </td>
 
-                                                    <td className="w-12 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                    <td className="w-12 px-5 py-5 border-b-2 border-gray-200 bg-white text-sm">
                                                         <p className="text-gray-900 whitespace-no-wrap">
                                                             2022-02-20T04:30
                                                         </p>
                                                     </td>
 
-                                                    <td className="w-12 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                    <td className="w-12 px-5 py-5 border-b-2 border-gray-200 bg-white text-sm">
                                                         <p className="text-gray-900 whitespace-no-wrap">
                                                             {each.subscriberCount}
                                                         </p>
