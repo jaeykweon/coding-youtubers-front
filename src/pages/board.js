@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactTooltip from "react-tooltip";
 import boardData from '../assets/test_data/board_data.js';
 
 function Board(){
@@ -76,7 +77,7 @@ function Board(){
                                                                 <img 
                                                                     className="w-full h-full rounded-full"
                                                                     src={each.profileImage}
-                                                                    alt="" 
+                                                                    alt={each.name} 
                                                                 />
                                                             </div>
                                                             <div className="text-gray-900 font-bold ">
@@ -98,9 +99,24 @@ function Board(){
                                                             each.videos.map((video)=> 
                                                                 {
                                                                     return (
-                                                                        <p className="my-2 text-gray-900 whitespace-no-wrap">
-                                                                            {(video)}
-                                                                        </p>
+                                                                        <>
+                                                                            <p 
+                                                                                className="my-2 text-gray-900 whitespace-no-wrap"
+                                                                                data-tip data-for={video.title}
+                                                                                >
+                                                                                <a 
+                                                                                    href={video.url}
+                                                                                    target="_blank"
+                                                                                    rel="noreferrer noopener"
+                                                                                    >
+                                                                                    {video.title}
+                                                                                </a>
+                                                                            </p>
+
+                                                                        <ReactTooltip id={video.title} place="top" effect="solid">
+                                                                            <img src={video.thumbnail}></img>
+                                                                        </ReactTooltip>
+                                                                      </>
                                                                     )
                                                                 }
                                                             )
