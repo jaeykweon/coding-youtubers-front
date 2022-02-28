@@ -13,7 +13,7 @@ function Board(){
 
     return (
         <>
-            <div className="bg-white p-8 rounded-md w-full">
+            <div className="p-8 rounded-md w-full">
                 <div className="flex items-center justify-between pb-6">
                     <div>
                         <h1 className="text-gray-600 font-bold text-2xl">Coding Youtubers</h1>
@@ -45,7 +45,7 @@ function Board(){
 
             <div className="flex text-center justify-center">
                 <div className="w-2/3  -mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-                    <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
+                    <div className="inline-block min-w-full shadow-lg rounded-lg overflow-hidden">
                         <table className="min-w-full leading-normal">
                             <thead>
                                 <tr>
@@ -71,9 +71,9 @@ function Board(){
                                         mainData.map((each,i)=> {
                                             return (
                                                 <tr className="">
-                                                    <td className="w-10 px-2 py-2 border-b-2 border-gray-200 bg-white">
+                                                    <td className="w-22 px-2 py-2 border-b-2 border-gray-200 bg-white">
                                                         <div className="grid grid-cols-1 gap-4 place-items-center">
-                                                            <div className="w-10 h-10">
+                                                            <div className="w-16 h-16">
                                                                 <img 
                                                                     className="w-full h-full rounded-full"
                                                                     src={each.profileImage}
