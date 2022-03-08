@@ -67,10 +67,10 @@ a {
   color: #000;
 }
 a:hover {
-  color: #4dd0e1;
+  color: #0078FF;
 }
 a:focus, a:active {
-  color: #00bcd4;
+  color: #0078FF;
 }
 
 a::before {
@@ -80,7 +80,7 @@ a::before {
   top: 100%;
   height: 3px;
   width: 100%;
-  background-color: #00bcd4;
+  background-color: #0078FF;
   -webkit-transform-origin: center top;
           transform-origin: center top;
   -webkit-transform: scale(0, 1);

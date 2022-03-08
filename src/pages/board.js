@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import ReactTooltip from "react-tooltip";
 import boardData from '../assets/test_data/board_data.js';
 
+const youtubeRed = {
+    background:"#c4302b"
+};
+
 function Board(){
 
     useEffect(()=> {
@@ -31,7 +35,8 @@ function Board(){
                     </div>
                     <div className="lg:ml-40 ml-10 space-x-8">
                         <button 
-                            className="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer"
+                            className="px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer"
+                            style={youtubeRed}
                             onClick={() => {
                                 window.open("https://github.com/jaeykweon/coding-youtubers-front", "_blank", "noopener");
                               }}
